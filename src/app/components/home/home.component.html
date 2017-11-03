@@ -1,0 +1,65 @@
+<mat-checkbox>Check me!</mat-checkbox>
+
+<br>
+
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<br>
+
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Input">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Textarea"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Select">
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<br>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Favorite food" value="Sushi">
+  </mat-form-field>
+</form>
+
+<br>
+
+<mat-radio-group>
+  <mat-radio-button value="1">Option 1</mat-radio-button>
+  <mat-radio-button value="2">Option 2</mat-radio-button>
+</mat-radio-group>
+
+<br>
+
+<mat-slider></mat-slider>
+
+<br>
+
+<mat-slide-toggle>Slide me!</mat-slide-toggle>
+
+
+<br>
+
+<mat-card>Simple card</mat-card>
+
+<br>
+
+<mat-icon>home</mat-icon>
+
+<br>
+
+<span matTooltip="Tooltip!">I have a tooltip</span>
+
+<app-top></app-top>
