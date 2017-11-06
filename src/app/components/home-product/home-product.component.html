@@ -1,0 +1,57 @@
+<div class="row product-row1">
+    <ul class="list-inline col-9">
+      <li  style="min-width: 131  px;"><font>今日超值推荐</font></li>
+      <li><a>全部</a></li>
+      <li><a>手机</a></li>
+      <li><a>数码</a></li>
+      <li><a>母婴</a></li>
+      <li><a>美食</a></li>
+      <li><a>百货</a></li>
+      <li><a>家电</a></li>
+      <li><a>办公</a></li>
+      <li><a>户外</a></li>
+      <li><a>鞋服</a></li>
+      <li><a>箱包</a></li>
+      <li><a>玩具</a></li>
+    </ul>
+</div>
+<div class="spacer"></div>
+<div class="row row-2">
+  <!-- <div *ngFor="let product of products" class="col-sm-3" >
+    <img class="row" [src]="product.img" style="width:212px; height:200px"/>
+  </div> -->
+  <ul class="list-inline">
+    <li *ngFor="let product of products" class="col-sm-3 col-md-3 col-xs-3 product-sm3">
+      <div class="product-image">
+        <a><img class="row" [src]="product.img" style="width:208px; height:200px"/></a>
+      </div>
+
+      <div class="comment">
+        <a>
+          <i class="glyphicon glyphicon-comment">{{ product.comment }}</i>
+        </a>
+        <a>
+          <i class="glyphicon glyphicon-thumbs-up">{{ product.support }}</i>
+        </a>
+        <a>
+          <i class="glyphicon glyphicon-thumbs-down">{{ product.nonsupport }}</i>
+        </a>
+      </div>
+
+      <div class="title">
+        <a>
+          <font>{{ product.title }}</font>
+        </a>
+      </div>
+
+      <div class="price">
+        <font>{{ product.price }}</font>
+      </div>
+
+      <div class="platform">
+        <font class="pull-left">{{ product.platform }}</font>
+        <font class="pull-right">{{ product.time }}</font>
+      </div>
+    </li>
+  </ul>
+</div>

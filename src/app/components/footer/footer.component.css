@@ -1,8 +1,5 @@
-body {  
-    font-size: 12px;
-    line-height: 1.5;
-    font-family: Helvetica,Hiragino Sans GB,Microsoft Yahei,sans-serif;
-    color: #5a5a5a;
+.footer-contanier {
+    width: 100%;
 }
 
 .main-footer {
