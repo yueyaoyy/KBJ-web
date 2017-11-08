@@ -1,0 +1,291 @@
+.downapp {
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  right: 90px;
+  top: 50px;
+  text-align: center;
+}
+
+.main-navi {
+  height: 40px;
+  background-color: #ea5252;
+}
+
+.main-navi .menu-title {
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  float: left;
+  width: 234px;
+  background-color: #ea5252;
+}
+
+.li {
+  float: left;
+  position: relative;
+  padding: 0px 8px;
+  z-index: 2;
+}
+
+.m-a {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 40px;
+  text-decoration: none;
+  display: block;
+  height: 40px;
+  padding: 0px 20px;
+}
+
+.main-navi .menu-title a {
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.qr img {
+  width: 75px;
+  height: 75px;
+  border: none;
+}
+
+.main-navi .menu-nav {
+  /*float: left;*/
+  margin-left: 20px;
+}
+
+.main-topbar {
+  height: 27px;
+  line-height: 27px;
+  border-bottom: solid 1px #DCDCDC;
+  background-color: #fbfbfb;
+}
+
+.content-inner {
+  width: 1190px;
+  margin: 0px auto;
+}
+
+.main-header {
+  height: 100px;
+}
+
+.m {
+  float: left;
+  width: 170px;
+  margin-top: 20px;
+  margin-left: 46px;
+}
+
+.n {
+  font-size: 12px;
+}
+
+.panel {
+  background-color: #ea5252;
+  padding: 2px 0 2px 2px;
+  height: 34px;
+  position: relative;
+}
+
+.skey {
+  border: none;
+  padding: 6px 0;
+  text-indent: 10px;
+  height: 22px;
+  line-height: 22px;
+  width: 485px;
+  outline: 0;
+  background: #fff;
+  -webkit-appearance: none;
+  display: block;
+  font-family: 'Microsoft Yahei';
+  color: #5a5a5a;
+  font-size: 12px;
+}
+
+.sInput {
+  width: 535px;
+  position: relative;
+}
+
+.sBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 85px;
+  height: 38px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.btnSearch {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #ea5252;
+  cursor: pointer;
+  height: 35px;
+  border: none;
+  width: 50px;
+  outline: 0;
+  -webkit-appearance: none;
+}
+
+.tabs {
+  height: 25px;
+}
+
+.search {
+  float: right;
+  padding: 30px 350px 30px 0;
+  width: 575px;
+}
+
+.main-topbar {
+  border-bottom: solid 1px #DCDCDC;
+  font-size: 12px;
+  line-height: 27px;
+}
+
+.hd h3 {
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  font-weight: 400;
+  line-height: 35px;
+  margin: 0;
+  padding: 0 6px;
+  color: #333;
+}
+
+.goods-filter {
+  text-align: left;
+  position: relative;
+  width: 958px;
+  margin: 0 auto;
+}
+
+
+.goods-filter .hd {
+  background: #f6f6f6;
+  height: 35px;
+  overflow: hidden;
+  border: 1px solid #cacaca;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.bd {
+  border: 1px solid #cacaca;
+  border-top: none;
+}
+
+.a-key {
+  float: left;
+  font-weight: 700;
+  width: 84px;
+  text-align: center;
+  text-align: left;
+  padding-left: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.bd .prop-line {
+  border-bottom: 1px dotted #c7c7c7;
+  padding: 10px 0;
+  position: relative;
+  height:100px;
+}
+
+.a-value li.checked a {
+  background-color: #ff6702;
+  color: #fff;
+}
+
+.pinpai li {
+  width: 96px;
+  margin-right: 0;
+  font-size: 12px;
+}
+
+.pingmu li {
+  margin-right: 0;
+  font-size: 12px;
+}
+
+/*.checked {*/
+  /*width: 96px;*/
+  /*margin-right: 0;*/
+/*}*/
+
+.goods-filter .bd .prop-line .a-value li {
+  float: left;
+  text-align: left;
+  height: 24px;
+  margin-right: 20px;
+  white-space: nowrap;
+  line-height: 24px;
+}
+
+.a-value ul, li {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  /*overflow: hidden;*/
+}
+
+.hehe {
+  width:800px;
+  padding-left: 100px;
+}
+
+.wine-list .hd {
+  background: #f6f6f6;
+  height: 35px;
+  overflow: hidden;
+  border: 1px solid #cacaca;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.sort dd {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.sort dl {
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+}
+
+.wine-list .hd .reultSearchdiv .result-txt {
+  width: 160px;
+  padding: 1px;
+  height: 17px;
+  line-height: 17px;
+  vertical-align: middle;
+  border: 1px solid #CCC;
+}
+
+.result-btn {
+  background-position: 0 0;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 22px;
+  height: 22px;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #DDD;
+  padding: 4px 13px 5px;
+  color: #666;
+  background-color: #f7f7f7;
+  background-repeat: repeat-x;
+  padding: 0 6px;
+  background-image: linear-gradient(top,#f7f7f7,#f2f2f2);
+  background-attachment: scroll;
+}

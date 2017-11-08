@@ -1,3 +1,115 @@
-<p>
-  top works!
-</p>
+<div class="main-topbar">
+  <div class="content-inner">
+    <div class="account">
+      欢迎来到可比价！<a>请登录</a> &nbsp;<a>免费注册</a>
+      <div style = "float: right">
+        <a><i class="mmb-iconfont"></i>手机可比价</a><i class="mmb-iconfont ic-arr"></i>
+        <a>购物助手</a>
+        <a>新手帮助</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-header">
+  <div class="m">
+    <img src="http://misc.manmanbuy.com/images/logo.png" alt="慢慢买比价网——理性消费倡导者">
+  </div>
+
+  <div class="search">
+    <div class="panel">
+      <form action="http://s.manmanbuy.com/Default.aspx" method="get">
+        <div class="sInput"><input type="text" name="key" id="skey" class="skey" value="" autocomplete="off" placeholder="请输入您想比较的商品名称或型号"></div>
+        <div class="sBtn"><input type="submit" value="搜索" name="btnSearch" class="btnSearch"></div>
+      </form>
+    </div>
+    <div class="downapp">
+      <span class="n">下载手机可比价</span>
+      <span class="qr">
+        <img src="http://static.manmanbuy.com/res/app_qr.jpg"></span>
+    </div>
+  </div>
+</div>
+
+<div class="main-navi">
+  <div class="content-inner">
+    <div class="menu-title">
+      <a href="http://www.manmanbuy.com/shop.aspx">比价导航</a></div>
+    <div class="menu-nav">
+      <ul style="list-style:none">
+        <li class="li"><a href="http://www.manmanbuy.com/" class="m-a">首页</a></li>
+        <li class="li"><a href="http://home.manmanbuy.com/bijia.aspx" class="m-a">全网比价</a></li>
+        <li class="li"><a href="http://cu.manmanbuy.com/" class="m-a">省钱控</a></li>
+        <li class="li"><a href="http://zhekou.manmanbuy.com/" class="m-a">国内折扣</a></li>
+        <li class="li"><a href="http://baicai.manmanbuy.com/" class="m-a">白菜价</a></li>
+        <li class="li"><a href="http://tool.manmanbuy.com/HistoryLowest.aspx" class="m-a">历史价格查询</a></li>
+        <li class=""><a href="###" class="m-a a-hassub">更多</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div id="ctl00_ContentPlaceMain_searchField" class="goods-filter">
+  <div class="hd">
+    <h3>根据你的需求筛选手机 进行比价</h3>
+  </div>
+  <div class="bd">
+    <div class="prop-line">
+      <div class="a-key">品牌：</div>
+      <div class="hehe">
+        <div class="a-value pinpai" *ngFor="let product of product">
+          <ul style="list-style:none">
+            <li>{{product}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="prop-line">
+      <div class="a-key">屏幕尺寸：</div>
+      <div class="hehe">
+        <div class="a-value pingmu" *ngFor="let size of size">
+          <ul style="list-style:none">
+            <li>{{size}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="hd">
+  <div class="sort">
+    <dl> <dt>排序：</dt>
+      <dd class="on">
+        <a href="cpl_57_qz_0_0_0_0_0_0_0_0_0_0_0_1.aspx" title="按默认排序">默认</a>
+      </dd>
+      <dd><a href="cpl_57_jg_0_0_0_0_0_0_0_0_0_0_0_1.aspx" title="按价格排序">价格</a></dd>
+      <dd><a href="cpl_57_comment_0_0_0_0_0_0_0_0_0_0_0_1.aspx" title="按评论数排序">全网评论数</a></dd>
+    </dl>
+  </div>
+  <div class="reultSearchdiv">结果中搜索：<input id="resultKey" type="text" value="" class="result-txt">
+    <input type="button" value="搜索" id="searchbtn" class="result-btn">
+  </div>
+  <div class="mini-page">
+    <dl><dt>共找到<em>349</em>个商品</dt>
+      <dd><a href="javascript:;" title="上一页" class="disabled">&lt;</a></dd>
+      <dd><em class="cur">1</em>/18</dd>
+      <dd><a href="cpl_57_qz_0_0_0_0_0_0_0_0_0_0_0_2.aspx" title="下一页">&gt;</a></dd>
+    </dl>
+    <div class="switch-view">
+      <a href="listSearch_Stock.aspx?PageID=1&amp;class=57&amp;orderby=qz&amp;ppid=0&amp;pf=0&amp;price=0&amp;tagid=0&amp;year=0&amp;f1=0&amp;f2=0&amp;f3=0&amp;f4=0&amp;f5=0&amp;f6=0&amp;dis=line" title="列表模式"><i class="iconfont"></i></a>
+      <a href="listSearch_Stock.aspx?PageID=1&amp;class=57&amp;orderby=qz&amp;ppid=0&amp;pf=0&amp;price=0&amp;tagid=0&amp;year=0&amp;f1=0&amp;f2=0&amp;f3=0&amp;f4=0&amp;f5=0&amp;f6=0&amp;dis=big" class="on" title="大图模式"><i class="iconfont"></i></a>
+    </div>
+  </div>
+  <div class="clear">
+  </div>
+</div>
+
+
+
