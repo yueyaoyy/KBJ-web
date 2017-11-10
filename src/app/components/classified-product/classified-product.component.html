@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-xs-3 col-sm-3" *ngFor="let character of characters">      
+      <div class="card">
+        <div class="item">
+          <div class="size">{{character.size}}</div>
+          <div class="pic"> 
+            <a href="#" target="_blank" title="{{character.title}}">
+              <img src="{{character.image}}" style="display: inline;">
+            </a>
+          </div>
+          <div class="price">
+            <em>¥</em>{{character.price}}
+            <span class="qi">起</span>
+          </div>
+          <div class="name">
+            <a href="#" target="_blank" title="{{character.title}}">
+              {{character.title}}
+            </a> 
+          </div>
+          <div class="sales">全网有<span>{{character.total_commits}}</span>人评论</div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default cart">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>{{character.shop}}家在售
+            </button>
+            <button type="button" class="btn btn-default cart">
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>收藏
+            </button>
+            <button type="button" class="btn btn-default cart">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>对比
+            </button>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>

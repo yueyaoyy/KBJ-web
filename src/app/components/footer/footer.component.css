@@ -1,134 +1,96 @@
-.footer-contanier {
-    width: 100%;
+.footer-row1 {
+	background: #2c2c2c;
+	color: #909090;
 }
 
-.main-footer {
-    border-top: 1px solid #ececec;
-    background-color: #ffffff;
-    height: 290px;
+.footer-left {
+	width: 280px;
 }
 
-.main-footer .foot-nav .footer-app {
-    float: left;
-    width: 280px;
+.footer-left .qr {
+	margin: 30px 0px 10px 0px;
+	text-align: center
 }
 
-.main-footer .foot-nav .footer-app .qr {
-    margin: 30px 0px 10px 0px;
+.footer-left .qr .about {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1;
 }
 
-.main-footer .foot-nav .footer-app .qr .qr-img {
-    width: 125px;
-    height: 125px;
-    background-position: 0 0;
-    float: left;
-    margin-right: 20px;
+.footer-left .qr .qr-download .img-thumbnail {
+	height: 150px;
+	padding: 0px;
 }
 
-.qr-ot button {
-    width: 115px;
-    height: 40px;
-    padding: 0px;
-    margin: 5px 0px;
+.footer-right {
+	margin: 30px 0px 10px 0px;
+	float: left;
+	border-left: 1px solid #909090;
+	width: 622px;
+	height: 210px;
+	margin: 20px 20px;
 }
 
-.main-footer .foot-nav .footer-app .p {
-    font-size: 28px;
+.right-title {
+	text-align: center;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1;
+	margin-top: 15px;
 }
 
-.content-inner {
-    width: 1190px; 
-    margin: 0px auto;
+.right-content{
+	text-align:left;
+	font-size: 13px;
+	line-height:26px;
+	width:460px;
+	margin-left: 80px;
 }
 
-.main-footer .foot-nav .footer-guide {
-    float: left;
-    border-left: 1px solid #ececec;
-    border-right: 1px solid #ececec;
-    width: 622px;
-    height: 210px;
-    margin: 20px 20px;
+.footer-right .down {
+	margin-left: 80px;
 }
 
-.guide-title {
-    text-align:center;
-    font-size:14px;
-    line-height:40px;
-    height:40px;
-    margin-bottom:12px;
+.footer-right .down .advice {
+	float: left;
+	font-weight: bolder;
 }
 
-.guide-content{
-    text-align:left;
-    font-size: 13px;
-    line-height:26px;
-    width:460px;
-    margin-left: 80px;
+.footer-right .down .cooperation_shop {
+	margin-left: 40px;
 }
 
-.guide-div {
-    text-align:left;
-    font-size: 12px;
-    line-height:40px;
-    width:460px;
-    margin-left: 80px;
-    margin-top: 7px;
+.footer-right .down .cooperation_shop .cooperation_div {
+	float: left;
+	padding-right: 15px;
+	overflow: hidden;
+}
+
+.footer-right .down .cooperation_shop .cooperation_div :hover {
+	color: red
+}
+
+.footer-right .down .helper {
+	float: left;
+	font-weight: bolder;
+}
+
+.footer-right .down .rontech .rontech_div {
+	float: left;
+	padding-left: 10px;
+	overflow: hidden;
+}
+
+.footer-right .down .rontech .rontech_div :hover{
+	color: red
 }
 
 a {
-    color: #333;
-    text-decoration: none;
-}
-
-.main-footer .foot-nav .footer-work {
-    float: left;
-    width: 246px;
-}
-
-.footer-div {
-    text-align:left;
-    font-size:14px;
-    line-height:60px;
-    height:60px;
-    margin-left:40px;
-    margin-top:10px;
-}
-
-.hz_div {
-    line-height: 26px;
-    height: 40px;
-    margin-left: 40px;
+	text-decoration: none;
 }
 
 .clear {
-    clear: both;
-    height: 5px;
-    /* height: 0px;
-    margin: 0;
-    padding: 0;
-    width: 0;
-    border: none;
-    overflow: hidden;
-    font-size: 0;
-    line-height: 0; */
+	clear: both;
+	height: 5px;
 }
-
-.main-footer .foot-copyright {
-    background-color: #333333;
-    height: 40px;
-    color: #ddd;
-    line-height: 40px;
-    text-align: center;
-}
-
-.main-footer .foot-copyright a {
-    color: #ddd;
-}
-
-.main-footer .foot-copyright em {
-    padding: 0px 6px;
-    color: #555;
-    font-size: 9px;
-    font-style: normal;
-}
- 

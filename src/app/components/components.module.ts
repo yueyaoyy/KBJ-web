@@ -7,6 +7,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { HomeProductComponent } from './home-product/home-product.component';
 import { TopComponent } from './top/top.component';
+import { FooterComponent } from './footer/footer.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ClassifiedProductComponent } from './classified-product/classified-product.component';
 
 import { ButtomComponent } from './buttom/buttom.component';
 
@@ -23,6 +26,9 @@ import { ButtomComponent } from './buttom/buttom.component';
     HomeProductComponent,
     TopComponent,
     ButtomComponent,
+    FooterComponent,
+    ProductDetailComponent,
+    ClassifiedProductComponent,
   ],
   exports: [
     FooterComponent,
@@ -30,6 +36,7 @@ import { ButtomComponent } from './buttom/buttom.component';
     HomeProductComponent,
     TopComponent,
     ButtomComponent,
+    FooterComponent
   ],
 })
 export class ComponentsModule { }

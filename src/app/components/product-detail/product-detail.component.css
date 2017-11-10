@@ -1,0 +1,314 @@
+.main {
+    margin: 20px 200px;
+}
+
+.head {
+    width: 100%;
+    text-align: left;
+}
+
+.head .main-title h1 {
+    font-size: 20px;
+    font-family: "Microsoft Yahei";
+    font-weight: bold;  
+    margin: 0;
+    padding: 0;
+    white-space:nowrap;
+}
+
+.head .info {
+    margin-top: 15px;
+}
+
+.head .main-title h1 span {
+    color: #f27b04;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 36px;
+    display: block;
+}
+
+.head .info .pic {
+    float: left;
+    width: 330px;
+}
+
+.head .info .pic .btn {
+    display: inline-block;
+    background-color: #f6f6f6;
+    color: #adadad;
+    font-size: 15px;
+    width: 75px;
+    height: 35px;
+    text-align: center;
+    margin: 10px 3px;
+}
+
+.head .info .middle {
+    text-align: left;
+    display: inline-block;
+    position: absolute;
+    margin-left: 135px;
+}
+
+.head .info .middle .meta {
+    margin: 10px auto;
+    color: #999999;
+}
+
+.head .info .middle .meta span {
+    color: #999999;
+}
+
+.head .info .middle .meta span i.iconfont {
+    color: #c5cdcf;
+    margin-right: 4px;
+    vertical-align: -2px;
+}
+
+.head .info .middle .meta span a {
+    margin-right: 4px;
+    vertical-align: -2px;
+}
+
+.head .info .middle .meta a {
+    text-decoration: none;
+    margin-left: -5px;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 5px;
+}
+
+.head .info .middle .middle-info p {
+    line-height: 30px;
+    font-size: 14px;
+    
+}
+
+.head .info .middle .link {
+    margin-top: 16px;
+}
+
+.btn-link {
+    display: inline-block;
+    margin: 10px auto;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #f27b04;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    background-color: #e0000e;
+}
+
+.head .info .middle .link .btn em {
+    font-style: normal;
+    font-family: "simsun";
+    margin-left: 8px;
+}
+
+.head .info .middle .note {
+    font-size: 14px;
+    margin-top: 22px;
+    white-space:nowrap;
+}
+
+.clear {
+    clear: both;
+}
+
+.reason {
+    float: left;
+}
+
+.reason-title {
+    font-size: 20px;
+    font-family: "Microsoft Yahei";
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.reason-main {
+    font-size: 18px;
+    margin-top: 8px;
+    line-height: 30px;
+    box-shadow: #f2f2f2 2px 3px 3px;
+    padding: 20px 15px 30px 15px;
+    border: 1px solid #f5f5f5;
+    border-top: 1px solid #000;
+    margin-bottom: 5%;
+}
+
+.reason-foot {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.comment {
+    margin-top: 10px;
+    color: #999;
+}
+
+.comment span {
+    border-right: 0px solid #e6e6e6;
+    margin-right: 16px;
+    padding-right: inherit;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    background: url(http://nocache.zuyushop.com:8013/cuxiao/images/icon.gif) no-repeat;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.customer {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.textareaArrow {
+    width: 100%;
+    float: left;
+    height: 7px;
+    overflow: hidden;
+    background: url(http://nocache.zuyushop.com:8013/cuxiao/images/tjlyA1.gif) 90% top no-repeat;
+    margin-top: 5px;
+    position: relative;
+}
+
+
+.textareaArrow1 {
+    width: 100%;
+    height: 7px;
+    overflow: hidden;
+    background: url(http://nocache.zuyushop.com:8013/cuxiao/images/tjlyA1.gif) 95% top no-repeat;    
+    border-bottom: 1px #e8e8e8 solid;
+}
+
+.reason textarea {
+    background: #f6f6f6;
+    border: 1px solid #e8e8e8;
+    width: 100%;
+    margin-top: -1px;
+    height: 100px;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.good-bad {
+    margin-top: 2%;
+}
+
+.btn-comment {
+    display: inline-block;
+    margin: 10px auto;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #f27b04;
+    border-radius: 3px;
+}
+
+.btn-comment:hover {
+    background-color: #e0000e;
+}
+
+.comment-contain span {
+    float: right;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.comment-contain span font {
+    color: #f27b04;
+    font-weight: bold;
+}
+
+
+.reason .commentlist {
+    margin-top: 10px;
+}
+
+.reason .commentlist ul li {
+    padding-left: 50px;
+}
+
+
+.reason .commentlist ul li {
+    margin-top: 12px;
+    border-bottom: 1px dotted #e0e0e0;
+    padding-bottom: 12px;
+    overflow: hidden;
+    width: 795px;
+    margin-bottom: 2%;
+}
+
+.reason .commentlist .avatar {
+    float: left;
+    width: 80px;
+}
+
+.reason .commentlist .avatar img {
+    width: 70px;
+    height: 70px;
+}
+
+.reason .commentlist .words {
+    float: left;
+    width: 650px;
+}
+
+.reason .commentlist .words .meta {
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+}
+
+.reason .commentlist .words .meta .name {
+    float: left;
+}
+
+.reason .commentlist .words .meta .time {
+    color: #999999;
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+}
+
+.reason .commentlist .words .con {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.reason .commentlist .words .commentlistbtns {
+    float: right;
+    height: 26px;
+    line-height: 26px;
+}
+
+.reason .commentlist .words .commentlistbtns a {
+    color: #7783CB;
+    margin-left: 10px;
+}
+
+.reason .commentlist .words .meta .name span {
+    color: #f27b04;
+    margin-left: 4px;
+}
+    
+
+
