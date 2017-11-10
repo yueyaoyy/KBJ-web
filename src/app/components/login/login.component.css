@@ -1,0 +1,148 @@
+.login-image .col-md-2 {
+  max-width: 90px;
+  min-width: 80px;
+}
+
+.login-image .col-md-1 {
+  max-width: 39px;
+  padding-left: 0px;
+}
+
+.login-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.col-md-1 {
+  max-width: fit-content;
+}
+
+.login-sign {
+  color: #fff;
+  background-color: #f70;
+  display: inline-block;
+  width: 94px;
+  height: 28px;
+  line-height: 28px;
+  overflow: hidden;
+  font-size: 14px;
+  transition: all 250ms linear;
+  text-align: center;
+  border: 1px solid #F70;
+  margin: 0px 7px;
+  min-width: 50px;
+}
+
+.login-img {
+  width: 40px;
+}
+
+.login-integrals {
+  display: inline-block;
+  width: 94px;
+  height: 28px;
+  line-height: 28px;
+  overflow: hidden;
+  font-size: 14px;
+  color: #F70;
+  transition: all 250ms linear;
+  text-align: center;
+  border: 1px solid #F70;
+  margin: 0px 7px;
+}
+
+.login-hello {
+  font-size: 14px;
+  color: #999;
+}
+
+.login-login {
+  padding-top: 10px;
+  min-width: 39px;
+}
+
+.login-register {
+  padding-top: 10px;
+  min-width: 39px;
+}
+
+.login-integral {
+  list-style: none;
+  padding-left: 15px;
+  min-width: 25px;
+}
+
+.login-center {
+  text-align: center;
+  min-width: 20px;
+}
+
+.login-App {
+  padding-left: 16px
+}
+
+.login-wx {
+  padding-left: 10px
+}
+
+.login-bj {
+  padding-left: 5px
+}
+
+.login-ul {
+  list-style: none;padding-left: 0px
+}
+
+.login-all {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 12px;
+  min-width: 10%;
+  background-color: #ffffff;
+  width: 230px;
+  height: 264px;
+}
+
+.login-signs {
+  padding-top: 10px;
+}
+
+.login-icon {
+  padding-top: 25px
+}
+
+.login-row {
+}
+
+.login-min {
+  min-width: 80px;
+}
+
+.login-concern {
+  padding-top: 20px;
+  color: red;
+}
+
+.login-border {
+  padding-top: 20px;border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF #f1f1f1 #f1f1f1 #FFF;
+  border-left: none
+}
+
+.login-concern-img {
+  width: 80px;min-width: 80px;
+}
+
+.login-concern-imgs {
+  padding-top: 20px;border-style: solid;    border-width: 1px;border-color: #FFFFFF #f1f1f1 #f1f1f1 #FFF;
+}
+
+.login-border-top {
+  border-top: 1px solid #ececec;
+}
+
+.login-list {
+  list-style: none
+}
