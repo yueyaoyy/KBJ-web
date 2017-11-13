@@ -102,6 +102,7 @@
   background-color: #ffffff;
   width: 230px;
   height: 264px;
+  overflow: hidden;
 }
 
 .login-signs {
