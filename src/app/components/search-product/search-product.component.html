@@ -1,0 +1,93 @@
+<div class="topNavigation">
+  <div class="btn-group btn-group-xs buttonGroup" role="group">
+    <button type="button" class="btn btn-default defaultSort">默认排序</button>
+    <button type="button" class="btn btn-default">销量</button>
+    <button type="button" class="btn btn-default">
+      价格<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+    </button>
+    <button type="button" class="btn btn-default">
+      价格<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="priceRange">
+    价格&nbsp;&nbsp;<input type="text" class="rangeFrom">&nbsp;-&nbsp;<input type="text" class="rangeTo">
+    <button class="priceConfirm">确定</button>
+  </div>
+</div>
+<div class="searchProductPlace">
+  <div class="selectPlace">收货地&nbsp;&nbsp;
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default dropdown-toggle places" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Dropdown link</a></li>
+        <li><a href="#">Dropdown link</a></li>
+      </ul>
+      <button class="btn btn-default checkIfExist">查看是否有货</button>
+    </div>
+  </div>
+  <div class="productList">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-xs-3 col-sm-3" *ngFor="let character of characters">      
+          <div class="card">
+            <div class="item">
+              <div class="pic"> 
+                <a href="#" target="_blank" title="{{character.title}}">
+                  <img src="{{character.image}}" style="display: inline;">
+                </a>
+              </div>
+              <div class="name">
+                <a href="#" target="_blank" title="{{character.title}}">
+                  {{character.title}}
+                </a> 
+              </div>
+              <div class="price">
+                <em>¥</em>{{character.price}}
+                <div class="shopName" style="float:right; margin-top: -3px;">
+                  <img src="{{character.shopicon}}"> 
+                  <a class="" href="#" target="_blank" title="京东商城" style="font-size:small">京东商城</a>
+                </div>
+              </div>
+              <div class="sales">有<span>{{character.total_commits}}</span>人评论
+                <div class="supplier">{{character.supplier}}</div>
+              </div>
+              <div class="goodsExist">{{character.goodsexist}}</div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<nav aria-label="Page navigation" class="pageNavigation">
+  <ul class="pagination">
+    <li class="tip">
+      共有167条记录  当前为<font color="red">1</font>/6页&nbsp; 
+    </li>
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    <li style="float: left;">
+      <input type="text" class="skip-text">
+      <button>跳转</button>
+    </li>
+  </ul>
+</nav>

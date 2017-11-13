@@ -1,6 +1,5 @@
 .container {
 	width: 970px;
-	float: left;
 }
 
 .col-md-3 {
@@ -31,7 +30,8 @@
 }
 
 .item .pic img {
-	width: 207px;
+	max-width: 220px;
+    max-height: 220px;
 	border: none;
 }
 
