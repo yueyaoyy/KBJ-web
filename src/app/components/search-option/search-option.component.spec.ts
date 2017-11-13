@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ButtomComponent } from './buttom.component';
+import { SearchOptionComponent } from './search-option.component';
 
-describe('ButtomComponent', () => {
-  let component: ButtomComponent;
-  let fixture: ComponentFixture<ButtomComponent>;
+describe('SearchOptionComponent', () => {
+  let component: SearchOptionComponent;
+  let fixture: ComponentFixture<SearchOptionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ButtomComponent ]
+      declarations: [ SearchOptionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ButtomComponent);
+    fixture = TestBed.createComponent(SearchOptionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

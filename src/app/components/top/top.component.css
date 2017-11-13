@@ -6,7 +6,8 @@
 .top-row2 {
   background-color: #ffffff;
   align-items:center;
-	display:-webkit-flex;
+  display:-webkit-flex;
+  min-width: 974px;
 }
 
 .top-row2 > .col-sm-4 {
@@ -27,11 +28,13 @@
 
 .search {
   align-items:center;
-	display:-webkit-flex;
+  display:-webkit-flex;
+  min-width: 465px;
 }
 
 .logo {
   padding-left: 50px;
+  min-width: 170px;
 }
 
 .top-row22 {
@@ -57,29 +60,36 @@
   color: #ea5252;
 }
 
-.top-col3 {
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  display: -webkit-flex;
+.top-row3 {
+  background-color: #ea5252;
+  margin: 0px;
+  min-width:1286px; 
 }
 
-.top-col3 font{
-  /* margin: 10px 50px 10px; */
+.top-row3 a {
+  color: antiquewhite;
+  cursor: pointer;
+}
+
+.top-row3 li {
+  width: 330px;
+}
+
+.top-row3 li a:hover {
+  background-color: #f2313d;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  background-color: #f2313d;
+}
+
+.top-nav {
+  text-align: center;
+}
+
+.top-nav font {
   color: antiquewhite;
   font-size: large;
-}
-
-.top-col9 .list-inline{
-  align-items: center;
-  display: -webkit-flex;
-  margin-bottom: 0px;
-}
-
-.top-col9 a {
-  color: antiquewhite;
-  font-size: 15px;
-  cursor: pointer;
 }
 
 .top-col9 li {

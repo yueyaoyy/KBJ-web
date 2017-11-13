@@ -10,9 +10,8 @@ import { TopComponent } from './top/top.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ClassifiedProductComponent } from './classified-product/classified-product.component';
 import { LoginComponent } from './login/login.component';
-
-import { ButtomComponent } from './buttom/buttom.component';
 import { SearchProductComponent } from './search-product/search-product.component';
+import { SearchOptionComponent } from './search-option/search-option.component';
 
 
 @NgModule({
@@ -26,21 +25,21 @@ import { SearchProductComponent } from './search-product/search-product.componen
     HomeComponent,
     HomeProductComponent,
     TopComponent,
-    ButtomComponent,
     FooterComponent,
     ProductDetailComponent,
     ClassifiedProductComponent,
     LoginComponent,
     SearchProductComponent,
+    SearchOptionComponent,
   ],
   exports: [
     FooterComponent,
     HomeComponent,
     HomeProductComponent,
     TopComponent,
-    ButtomComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    SearchOptionComponent,
   ],
 })
 export class ComponentsModule { }

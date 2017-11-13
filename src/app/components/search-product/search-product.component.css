@@ -1,13 +1,14 @@
 .topNavigation {
 	background-color: #f7f7f7;
-	margin: 5px 150px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid #ddd;
 	height: 44px;
 }
 
-.buttonGroup{
+.buttonGroup {
 	float:left;
 	margin-top: 11px;
-	margin-left: 10px;
 }
 
 .buttonGroup :hover {
@@ -20,8 +21,9 @@
 }
 
 .searchProductPlace {
-	margin: 5px 150px;
+	margin-top: 5px;
 	text-align: right;
+	border: 1px solid #ddd;
 }
 
 .places {
@@ -46,8 +48,9 @@
 
 .pageNavigation {
 	background-color: #f7f7f7;
-	margin: 5px 150px;
+	margin-top: 5px;
 	text-align: center;
+	border: 1px solid #ddd;
 }
 
 .priceRange {

@@ -22,12 +22,12 @@
     <div class="search col-sm-5 col-md-5 col-xs-5">
       <div class="top-col8">
         <div class="row">
-          <div class="input-group" style="min-width: 455px">
+          <div class="input-group">
             <input type="text" class="form-control" placeholder="请输入您想比较的商品名或型号" aria-describedby="basic-addon2">
             <span class="input-group-addon" id="basic-addon2">搜索</span>
           </div>
         </div>
-        <div class="row top-row22" style="min-width: 455px">
+        <div class="row top-row22">
           <ul class="list-inline">
             <li><font>热门比价:</font></li>
             <li *ngFor="let hotProduct of hotProducts"><a>{{ hotProduct }}</a></li>
@@ -51,21 +51,15 @@
     </div>
   </div>
 
-  <div class="row top-row3" style="background-color: #ea5252">
-    <div class="col-md-3 col-sm-3 col-xs-3 top-col3">
-      <font>比价导航</font>
-    </div>
-    <div class="col-md-9 col-sm-9 col-xs-9 top-col9">
-        <ul class="list-inline">
-          <li><a>首页</a></li>
-          <li><a>全网比价</a></li>
-          <li><a>省钱控</a></li>
-          <li><a>国内折扣</a></li>
-          <li><a>白菜价</a></li>
-          <li><a>历史价格查询</a></li>
-          <li><a href="###" class="m-a a-hassub">更多</a>
+  <div class="row top-row3">
+    <!-- <div class="col-md-9 col-sm-9 col-xs-9 top-col9 nav nav-pills nav-justified"> -->
+        <ul class="nav nav-pills nav-justified">
+          <li class="top-nav"><font>比价导航</font></li>
+          <li role="presentation" class="active"><a>首页</a></li>
+          <li role="presentation"><a>全网比价</a></li>
+          <li role="presentation"><a>历史价格查询</a></li>
         </ul>
-    </div>
+    <!-- </div> -->
   </div>
 </div>
 
