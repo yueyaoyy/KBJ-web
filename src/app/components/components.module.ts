@@ -12,6 +12,7 @@ import { ClassifiedProductComponent } from './classified-product/classified-prod
 import { LoginComponent } from './login/login.component';
 
 import { ButtomComponent } from './buttom/buttom.component';
+import { SearchProductComponent } from './search-product/search-product.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ButtomComponent } from './buttom/buttom.component';
     FooterComponent,
     ProductDetailComponent,
     ClassifiedProductComponent,
-    LoginComponent
+    LoginComponent,
+    SearchProductComponent,
   ],
   exports: [
     FooterComponent,

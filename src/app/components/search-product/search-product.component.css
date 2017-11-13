@@ -1,0 +1,180 @@
+.topNavigation {
+	background-color: #f7f7f7;
+	margin: 5px 150px;
+	height: 44px;
+}
+
+.buttonGroup{
+	float:left;
+	margin-top: 11px;
+	margin-left: 10px;
+}
+
+.buttonGroup :hover {
+	color: #ea5252;
+}
+
+.defaultSort {
+	background-color:#5A5A5A;
+	color:#fff
+}
+
+.searchProductPlace {
+	margin: 5px 150px;
+	text-align: right;
+}
+
+.places {
+	max-height: 26px;
+	padding-top: 2px;
+	border-radius: 0px;
+}
+
+.checkIfExist {
+	max-height: 26px;
+	padding-top: 3px;
+}
+
+.checkIfExist:hover {
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+}
+
+.productList {
+	text-align: justify;
+	margin-top: 2%;
+}
+
+.pageNavigation {
+	background-color: #f7f7f7;
+	margin: 5px 150px;
+	text-align: center;
+}
+
+.priceRange {
+	float: left;
+	margin-top: 11px;
+}
+
+.rangeFrom {
+	max-width: 42px;
+	max-height: 20px;
+}
+
+.rangeTo {
+	max-width: 42px;
+	max-height: 20px;
+}
+
+.priceConfirm {
+	max-height: 20px;
+	font-size: small;
+	padding-top: 0px;
+}
+
+.priceRange {
+	margin-left: 20px;
+}
+
+.container {
+	width: 1000px;
+	padding-left: 0px;
+    padding-right: 10px;
+}
+
+.col-md-3 {
+	margin-bottom: 1%;
+}
+
+.card {
+	border: 1px rgba(0,0,0,0.2) solid;
+	transition: 0.3s;
+	width: 240px;
+	margin-bottom: 1%;
+}
+
+.card:hover {
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+}
+
+.item {
+	padding: 15px 0 12px 0;
+	position: relative;
+}
+
+.item .pic img {
+	width: 207px;
+	border: none;
+	margin-top: -15px;
+	margin-left: 15px;
+}
+
+.item .price {
+	font-size: 20px;
+	font-family: Verdana;
+	color: #ea5252;
+	margin: 8px 10px 8px 10px;
+	font-weight: 400;
+}
+
+.item .price em {
+	font-style: normal;
+	font-size: 14px;
+}
+
+.item .name {
+	height: 40px;
+	overflow: hidden;
+	word-break: break-all;
+	line-height: 20px;
+	margin: 0 10px;
+	color: #666;
+	font-size: 12px;
+}
+
+.item .name a {
+	color: #666;
+}
+
+.item .name a:hover {
+	color: #ea5252 ;
+}
+
+.item .sales {
+	margin: 8px 10px 12px 10px;
+	color: #999;
+	font-size: 11px;
+}
+
+.item .supplier {
+	color: #999;
+	font-size: 11px;
+	float: right;
+}
+
+.item .sales span {
+	color: #005AA0;
+	font-weight: 700;
+	margin: 0 2px;
+}
+
+.goodsExist {
+	margin-left: 12px;
+}
+
+.pagination {
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+
+.tip {
+	float: left;
+	margin-top: 6.5px;
+	margin-right: 10px;
+}
+
+.skip-text {
+	max-width: 35px;
+	min-height: 23px;
+	margin-top: 4px;
+	margin-left: 10px
+}
