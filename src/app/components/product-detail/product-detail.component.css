@@ -31,6 +31,12 @@
 .head .info .pic {
     float: left;
     width: 330px;
+    text-align: center;
+}
+
+.head .info .pic img{
+    max-height: 220px;
+    max-width: 220px;
 }
 
 .head .info .pic .btn {
@@ -42,6 +48,14 @@
     height: 35px;
     text-align: center;
     margin: 10px 3px;
+}
+
+.head .info .pic .btn.btn-share span {
+    color:black
+}
+
+.head .info .pic .btn.btn-love span {
+    color:red
 }
 
 .head .info .middle {
@@ -150,6 +164,14 @@
     margin-bottom: 5%;
 }
 
+.reason-pic {
+    text-align:center;
+}
+
+.reason-pic span {
+    line-height:1.5;
+}
+
 .reason-foot {
     margin-top: 10%;
     text-align: center;
@@ -211,6 +233,22 @@
     margin-top: 2%;
 }
 
+.good-bad .btn.btn-default.btn-lg .glyphicon.glyphicon-thumbs-up {
+    color:red
+}
+
+.good-bad .btn.btn-default.btn-lg.thumbs-down {
+    margin-left:10px
+}
+
+.reason-title {
+    margin-bottom: 10px;
+}
+
+.reason-title .fbpl {
+    float: left
+}
+
 .btn-comment {
     display: inline-block;
     margin: 10px auto;
@@ -225,6 +263,10 @@
 
 .btn-comment:hover {
     background-color: #e0000e;
+}
+
+.comment-contain {
+    text-align: left;
 }
 
 .comment-contain span {
