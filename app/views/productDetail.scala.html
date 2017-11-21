@@ -1,0 +1,120 @@
+@(productCommentL: List[Map[String, String]], hotProductL: List[String])
+
+@main() {
+  @header.render(hotProductL)
+<div class="contanier main">
+  <div class="head">
+    <div class="main-title">
+      <h1>日加满力水 运动饮料 （水蜜桃味）600ml*12瓶+维生素运动饮料 600mL/瓶*3瓶<span>21.9元（可满99-50）</span></h1>
+    </div>
+    <div class="info">
+      <div class="pic">
+        <a href=" " title="日加满力水 运动饮料 （水蜜桃味）600ml*12瓶+维生素运动饮料 600mL/瓶*3瓶">
+          <img src="http://img2017.manmanbuy.com/2017110008280375889.jpg">
+        </a>
+        <div class="btns">
+          <button type="button" class="btn btn-share">
+            <span class="glyphicon glyphicon-share" aria-hidden="true"></span> 转发
+          </button>
+          <button type="button" class="btn btn-love">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> 收藏
+          </button>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="meta">
+          <span class="glyphicon glyphicon-eye-open"></span>
+          <i class="iconfont">浏览239次</i>
+          <span class="glyphicon glyphicon-comment"></span>
+          <a href="#pl"><i class="iconfont"></i>评论{{characters.length}}次</a>
+        </div>
+        <div class="middle-info">
+          <p>商城：京东商城</p>
+          <p>时间：2017-11-07 08:28</p>
+          <p>标签：
+            <a href="#">饮料</a>,
+            <a href="#">运动</a>
+          </p>
+        </div>
+        <div class="note">温馨提示：商品都具有一定的时效性，价格可能随时变化。</div>
+        <div class="link">
+          <button type="button" class="btn btn-link">直达链接<em>&gt;</em></button>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="reason">
+    <div class="reason-title">
+      <span>购买理由：</span>
+    </div>
+    <div class="reason-main">
+      <p>
+        日加满的营养素强化饮料大家应该比较熟悉，售价不低。此款为运动电解质饮料，没有牛磺酸等加持护法，含有钠钾离子，不含代糖，容量600ml*12瓶。
+        京东目前报价21.9元，可使用价格下方领取的满99-50优惠券，还赠送维生素运动饮料 600mL/瓶*3瓶（赠品限地区有货），又到好价。<br><br>
+      </p>
+      <div class="reason-pic">
+        <span>
+          <img src="http://apic-qiniu.zuyushop.com/cuxiaoPic/image/mmbAdmin/20171107082657_6155.jpg">
+        </span>
+      </div>
+      <div class="reason-foot">
+        <div class="link">
+          <button type="button" class="btn btn-link">直达链接<em>&gt;</em></button>
+        </div>
+        <div class="good-bad">
+          <button type="button" class="btn btn-default btn-lg">
+            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 5
+          </button>
+          <button type="button" class="btn btn-default btn-lg thumbs-down">
+            <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> 5
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="reason-title" id="pl">
+      <span class="fbpl">发表评论：</span>
+      <div class="comment customer">
+        <span class="icon">网友112***218</span>
+      </div>
+      <div class="textareaArrow"></div>
+      <textarea placeholder="您的一条评论将会影响网友的购买决定，请您依据事实慎重认真的进行评论。"></textarea>
+    </div>
+
+    <div class="comment-contain">
+      <button type="button" class="btn btn-comment">提交评论</button>
+      <span>已有<font>@productCommentL.size</font>条评论</span>
+    </div>
+
+    <div class="textareaArrow1"></div>
+    <div class="clear"></div>
+    <div class="commentlist">
+      <ul _hover-ignore="1">
+        @for(productComment <- productCommentL){
+        <li>
+          <div class="avatar">
+            <img src="@productComment.get("image")">
+          </div>
+          <div class="words">
+            <div class="meta">
+              <div class="name">@productComment.get("quote")<span>@productComment.get("name")</span></div>
+              <div class="time">@productComment.get("time")</div>
+            </div>
+            <div class="con">@productComment.get("con")</div>
+            <div class="other">
+              <div class="commentlistbtns">
+                <a href="javascript:;" data-parentid="937997" data-action="reply" class="reply bindok">回复</a>
+                <a href="#ding" onclick="ding('937997');">顶(<font id="ding_937997">0</font>)</a>
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+  @footer.render()
+}

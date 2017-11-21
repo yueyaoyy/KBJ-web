@@ -1,0 +1,161 @@
+@(categoryL: List[Map[String, Object]], homeProductL: List[Map[String, String]], hotProductL: List[String])
+
+@main() {
+  @header.render(hotProductL)
+  <div class="container home-container">
+    <div class="row home-row">
+      @*分类模块*@
+      <div class="col-md-3 col-sm-3 col-xs-3 column home-row2">
+        <div class="row clearfix home-col3">
+          <ul id="menu">
+          @for((category, idx) <- categoryL.zipWithIndex) {
+            <li>
+              <a>
+                <div class="row">
+                  <i class="glyphicon glyphicon-align-left col-md-1 col-sm-1 col-xs-1" aria-hidden="true"></i>
+                  <span class="col-md-8 col-sm-8 col-xs-8">@category.get("categoryTitle")</span>
+                  <i class="glyphicon glyphicon-menu-right col-sm-1 col-xs-1 col-md-1" aria-hidden="true"></i>
+                </div>
+              </a>
+              <div class="row home-row34">
+                @if(category.get("contentTitle").asInstanceOf[List[String]].size() >= 6){
+                  @for(title <- category.get("contentTitle").asInstanceOf[List[String]]){
+                    <a class="col-md-4 col-sm-4 col-xs-4">
+                      <i class="glyphicon glyphicon-picture" aria-hidden="true"></i>
+                      <span class="home-col34">@title</span>
+                    </a>
+                  }
+                }
+                @if(category.get("contentTitle").asInstanceOf[List[String]].size() < 6) {
+                  @for(title <- category.get("contentTitle").asInstanceOf[List[String]]) {
+                    <a class="col-md-6 col-sm-6 col-xs-6">
+                      <i class="glyphicon glyphicon-picture" aria-hidden="true"></i>
+                      <span class="home-col34">@title</span>
+                    </a>
+                  }
+                }
+              </div>
+            </li>
+          }
+          </ul>
+        </div>
+        <div class="row clearfix">
+          <div class="col-md-12 column"></div>
+        </div>
+      </div>
+
+      <div class="col-md-9 col-sm-9 col-xs-9 home-col9 column">
+        <div class="row">
+          @*图片轮播放*@
+          <div class="col-md-9 col-sm-9 col-xs-9 home-col26 column">
+            <div class="slider-wrapper flexslider" style="width:700px; height:250px">
+              <ul class="slider-content slides">
+                <li class="image">
+                  <img src="http://img5.imgtn.bdimg.com/it/u=3033037990,1425076943&fm=200&gp=0.jpg" style="width:700px; height:300px"/>
+                </li>
+                <li class="image">
+                  <img src="http://img5.imgtn.bdimg.com/it/u=3033037990,1425076943&fm=200&gp=0.jpg" style="width:700px; height:300px"/>
+                </li>
+                <li class="image">
+                  <img src="http://img5.imgtn.bdimg.com/it/u=3033037990,1425076943&fm=200&gp=0.jpg" style="width:700px; height:300px"/>
+                </li>
+              </ul>
+            </div>
+          </div>
+          @*登录模块*@
+          <div col-md-2 col-sm-2 col-xs-2 column>
+            <div class="login-all">
+              <div class="row login-image">
+                <div class="col-md-2 col-xs-2 col-sm-2">
+                  <img src="http://bbs.manmanbuy.com/images/face/none.gif">
+                </div>
+                <div class="login-hello">HI, 欢迎来到可比价!</div>
+                <div class="col-md-1 col-xs-1 col-sm-1 login-login">登录</div>
+                <div class="col-md-1 col-xs-1 col-sm-1 login-register">注册</div>
+              </div>
+              <div class="login-concern">您最近关注的商品</div>
+              <div class="row login-border-top">
+                <div class="col-md-6 login-border">
+                  <img src="http://img10.360buyimg.com/n0/jfs/t1531/29/501435053/267248/16a16a0c/558a63fcNc8b1a857.jpg" class="login-concern-img">
+                  <li class="login-list">SUPER MILD 惠润...</li>
+                </div>
+                <div class="col-md-6 login-concern-imgs">
+                  <img src="http://www.yiteng365.com/photos/65317_6.jpg?" class="login-concern-img">
+                  <li class="login-list">SUPER MILD 惠润...</li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        @*今日超值推荐模块*@
+        <div class="row clearfix home-row3">
+          <div class="row product-row1">
+            <ul class="list-inline product-col9">
+              <li style="min-width: 131px;"><font>今日超值推荐</font></li>
+              <li><a>全部</a></li>
+              <li><a>手机</a></li>
+              <li><a>数码</a></li>
+              <li><a>母婴</a></li>
+              <li><a>美食</a></li>
+              <li><a>百货</a></li>
+              <li><a>家电</a></li>
+              <li><a>办公</a></li>
+              <li><a>户外</a></li>
+              <li><a>鞋服</a></li>
+              <li><a>箱包</a></li>
+              <li><a>玩具</a></li>
+            </ul>
+          </div>
+          <div class="product-spacer"></div>
+          <div class="row product-row2">
+            <ul class="list-inline">
+              @for(homeProduct <- homeProductL){
+              <li class="col-sm-3 col-md-3 col-xs-3 product-sm3" onclick="location.href='/product/detail'">
+                <div class="product-image">
+                  <a><img class="row" src=@homeProduct.get("img") style="width:215px; height:200px"/></a>
+                </div>
+                <div class="product-comment">
+                  <a><i class="glyphicon glyphicon-comment">@homeProduct.get("comment")</i></a>
+                  <a><i class="glyphicon glyphicon-thumbs-up">@homeProduct.get("support")</i></a>
+                  <a><i class="glyphicon glyphicon-thumbs-down">@homeProduct.get("nonsupport")</i></a>
+                </div>
+                <div class="product-title">
+                  <a><font>@homeProduct.get("title")</font></a>
+                </div>
+                <div class="product-price">
+                  <font>@homeProduct.get("price")</font>
+                </div>
+                <div class="product-platform">
+                  <font class="pull-left">@homeProduct.get("platform")</font>
+                  <font class="pull-right">@homeProduct.get("time")</font>
+                </div>
+              </li>
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    @footer.render()
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.flexslider').flexslider({
+          //参数设置在这里
+          animation: "slide",//使用滑动效果
+          slideshowSpeed: 2300,//切换速度
+          after:function(slider){//加载完成后回调函数
+            //console.log(slider)
+          }
+        });
+      });
+
+      $('.arrow.left').click(function(){
+        $('.flex-prev').click();
+      });
+      $('.arrow.right').click(function(){
+        $('.flex-next').click();
+      });
+    </script>
+  </div>
+}
