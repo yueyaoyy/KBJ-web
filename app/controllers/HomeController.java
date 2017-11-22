@@ -1,6 +1,10 @@
 package controllers;
 
+import models.Product;
+import play.Logger;
 import play.mvc.*;
+import utils.SolrI;
+import services.SolrImpl;
 
 import java.util.*;
 
@@ -114,6 +118,13 @@ public class HomeController extends Controller {
         List<Map<String, String>> homeProductL = new ArrayList<>(Arrays.asList(homeProductL1, homeProductL2, homeProductL3, homeProductL4, homeProductL5, homeProductL6));
 
         List<String> hotProductL = new ArrayList<>(Arrays.asList("iphone X", "iphone 8", "小米", "华为p10", "iphone 7", "新ipad pro", "小米6"));
+
+        SolrI solr = new SolrImpl();
+
+        //List<Product> searchProductByName(String name, int start, String sort, int order, String... fq);
+        List<Product> products = solr.searchProductByName("*",0, "price", 1, new String[] {"id", "name", "price"});
+        Logger.debug("-----------solr: " + products.size());
+
         return ok(views.html.index.render(categoryL, homeProductL, hotProductL));
     }
 

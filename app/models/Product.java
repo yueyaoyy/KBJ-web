@@ -1,7 +1,13 @@
 package models;
 
+import io.ebean.Model;
 import org.apache.solr.client.solrj.beans.Field;
+import play.data.validation.Constraints;
 
+import javax.persistence.Entity;
+
+//@Entity
+//public class Product extends Model {
 public class Product {
 
     /**
@@ -19,6 +25,7 @@ public class Product {
     /**
      *
      */
+    //@Constraints.Required
     @Field
     private String id;
 
