@@ -50,7 +50,7 @@ public class SolrImpl implements SolrI {
     private static int socketTimeout;
 
 
-    private static Config config;
+    private final Config config;
 
     @Inject
     public SolrImpl(Config config) {

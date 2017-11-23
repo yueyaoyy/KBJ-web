@@ -1,10 +1,10 @@
-package controllers;
+package controllers.gui;
 
-import com.typesafe.config.Config;
 import models.Product;
 import play.Logger;
 import play.mvc.*;
-import solr.SolrI;
+import services.GeneralSearch;
+
 import javax.inject.Inject;
 import java.util.*;
 
@@ -14,10 +14,10 @@ import java.util.*;
  */
 public class HomeController extends Controller {
 
-    private static SolrI solr;
+    private static GeneralSearch searcher;
     @Inject
-    public HomeController(SolrI solr) {
-        this.solr = solr;
+    public HomeController(GeneralSearch searcher) {
+        this.searcher = searcher;
     }
 
     /**
@@ -128,7 +128,7 @@ public class HomeController extends Controller {
         // TODO
         // to be remove
         // just for test
-        List<Product> products = solr.searchProductByName("*",0, "name", 1, "id:jd_1*", "price:[1 TO 10]");
+        List<Product> products = searcher.query();
         Logger.debug("-----------solr: " + products.size());
         for (Product product : products) {
             Logger.debug(product.getId() + " : " + product.getName() + " : " + product.getPrice());

@@ -1,4 +1,4 @@
-package controllers;
+package controllers.gui;
 
 import play.mvc.*;
 
