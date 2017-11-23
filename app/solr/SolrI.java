@@ -1,9 +1,11 @@
 package solr;
 
+import com.google.inject.ImplementedBy;
 import models.Product;
 
 import java.util.List;
 
+@ImplementedBy(SolrImpl.class)
 public interface SolrI {
 
     /**

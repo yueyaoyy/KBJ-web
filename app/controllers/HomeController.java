@@ -5,8 +5,6 @@ import models.Product;
 import play.Logger;
 import play.mvc.*;
 import solr.SolrI;
-import solr.SolrImpl;
-
 import javax.inject.Inject;
 import java.util.*;
 
@@ -16,10 +14,10 @@ import java.util.*;
  */
 public class HomeController extends Controller {
 
-    private static Config config;
+    private static SolrI solr;
     @Inject
-    public HomeController(Config config) {
-        this.config = config;
+    public HomeController(SolrI solr) {
+        this.solr = solr;
     }
 
     /**
@@ -128,8 +126,8 @@ public class HomeController extends Controller {
         List<String> hotProductL = new ArrayList<>(Arrays.asList("iphone X", "iphone 8", "小米", "华为p10", "iphone 7", "新ipad pro", "小米6"));
 
         // TODO
-        // for test
-        SolrI solr = new SolrImpl(config);
+        // to be remove
+        // just for test
         List<Product> products = solr.searchProductByName("*",0, "name", 1, "id:jd_1*", "price:[1 TO 10]");
         Logger.debug("-----------solr: " + products.size());
         for (Product product : products) {
