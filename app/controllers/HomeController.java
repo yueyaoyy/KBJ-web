@@ -1,11 +1,13 @@
 package controllers;
 
+import com.typesafe.config.Config;
 import models.Product;
 import play.Logger;
 import play.mvc.*;
-import utils.SolrI;
-import services.SolrImpl;
+import solr.SolrI;
+import solr.SolrImpl;
 
+import javax.inject.Inject;
 import java.util.*;
 
 /**
@@ -13,6 +15,12 @@ import java.util.*;
  * to the application's home page.
  */
 public class HomeController extends Controller {
+
+    private static Config config;
+    @Inject
+    public HomeController(Config config) {
+        this.config = config;
+    }
 
     /**
      * An action that renders an HTML page with a welcome message.
@@ -119,11 +127,14 @@ public class HomeController extends Controller {
 
         List<String> hotProductL = new ArrayList<>(Arrays.asList("iphone X", "iphone 8", "小米", "华为p10", "iphone 7", "新ipad pro", "小米6"));
 
-        SolrI solr = new SolrImpl();
-
-        //List<Product> searchProductByName(String name, int start, String sort, int order, String... fq);
-        List<Product> products = solr.searchProductByName("*",0, "price", 1, new String[] {"id", "name", "price"});
+        // TODO
+        // for test
+        SolrI solr = new SolrImpl(config);
+        List<Product> products = solr.searchProductByName("*",0, "name", 1, "id:jd_1*", "price:[1 TO 10]");
         Logger.debug("-----------solr: " + products.size());
+        for (Product product : products) {
+            Logger.debug(product.getId() + " : " + product.getName() + " : " + product.getPrice());
+        }
 
         return ok(views.html.index.render(categoryL, homeProductL, hotProductL));
     }

@@ -1,4 +1,4 @@
-package services;
+package solr;
 
 import com.typesafe.config.Config;
 import models.Product;
@@ -6,7 +6,7 @@ import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import utils.SolrI;
+import solr.SolrI;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -50,7 +50,7 @@ public class SolrImpl implements SolrI {
     private static int socketTimeout;
 
 
-    private final Config config;
+    private static Config config;
 
     @Inject
     public SolrImpl(Config config) {

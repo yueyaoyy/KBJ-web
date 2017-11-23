@@ -1,4 +1,4 @@
-package utils;
+package solr;
 
 import models.Product;
 
