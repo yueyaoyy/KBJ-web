@@ -1,0 +1,36 @@
+{
+	"name": "KBJapp",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest"
+	},
+	"dependencies": {
+		"apisauce": "^0.14.1",
+		"ramda": "^0.25.0",
+		"ramdasauce": "^2.1.0",
+		"react": "16.0.0",
+		"react-native": "0.50.3",
+		"react-native-elements": "^0.18.2",
+		"react-native-vector-icons": "^4.4.2",
+		"react-navigation": "^1.0.0-beta.19",
+		"react-redux": "^5.0.6",
+		"reactotron-react-native": "^1.12.3",
+		"reactotron-redux": "^1.12.2",
+		"reactotron-redux-saga": "^1.12.2",
+		"redux": "^3.7.2",
+		"redux-persist": "^5.3.3",
+		"reduxsauce": "^0.7.0",
+		"seamless-immutable": "^7.1.2"
+	},
+	"devDependencies": {
+		"babel-jest": "21.2.0",
+		"babel-preset-react-native": "4.0.0",
+		"jest": "21.2.1",
+		"react-test-renderer": "16.0.0"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}
