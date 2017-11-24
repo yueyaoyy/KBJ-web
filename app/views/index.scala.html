@@ -48,22 +48,22 @@
         <div class="row">
           @*图片轮播放*@
           <div class="col-md-9 col-sm-9 col-xs-9 home-col26 column">
-            <div class="slider-wrapper flexslider" style="width:700px; height:250px">
+            <div class="slider-wrapper flexslider">
               <ul class="slider-content slides">
                 <li class="image">
-                  <img src="http://img5.imgtn.bdimg.com/it/u=3033037990,1425076943&fm=200&gp=0.jpg" style="width:700px; height:300px"/>
+                  <img src="http://c.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=aed7bfd496eef01f4d4110c1d5ceb513/1b4c510fd9f9d72a7a0116add62a2834349bbb1c.jpg" style="height:300px"/>
                 </li>
                 <li class="image">
-                  <img src="http://img5.imgtn.bdimg.com/it/u=3033037990,1425076943&fm=200&gp=0.jpg" style="width:700px; height:300px"/>
+                  <img src="http://i.weather.com.cn/images/cn/life/2013/10/20/67CC0195C767B1184EC42DA285815C06.jpg" style="height:300px"/>
                 </li>
                 <li class="image">
-                  <img src="http://img5.imgtn.bdimg.com/it/u=3033037990,1425076943&fm=200&gp=0.jpg" style="width:700px; height:300px"/>
+                  <img src="http://g.hiphotos.baidu.com/zhidao/pic/item/728da9773912b31b9e4022e88718367adbb4e1c7.jpg" style="height:300px"/>
                 </li>
               </ul>
             </div>
           </div>
           @*登录模块*@
-          <div col-md-2 col-sm-2 col-xs-2 column>
+          <div class="col-md-3 col-sm-3 col-xs-3 home-col23 column">
             <div class="login-all">
               <div class="row login-image">
                 <div class="col-md-2 col-xs-2 col-sm-2">
@@ -91,7 +91,7 @@
         <div class="row clearfix home-row3">
           <div class="row product-row1">
             <ul class="list-inline product-col9">
-              <li style="min-width: 131px;"><font>今日超值推荐</font></li>
+              <li style="min-width: 19%;"><font>今日超值推荐</font></li>
               <li><a>全部</a></li>
               <li><a>手机</a></li>
               <li><a>数码</a></li>
@@ -103,16 +103,15 @@
               <li><a>户外</a></li>
               <li><a>鞋服</a></li>
               <li><a>箱包</a></li>
-              <li><a>玩具</a></li>
             </ul>
           </div>
           <div class="product-spacer"></div>
           <div class="row product-row2">
-            <ul class="list-inline">
+            <div class="row product-row21">
               @for(homeProduct <- homeProductL){
-              <li class="col-sm-3 col-md-3 col-xs-3 product-sm3" onclick="location.href='/product/detail'">
+              <div class="col-sm-3 col-md-3 col-xs-3 product-sm3" onclick="location.href='/product/detail'">
                 <div class="product-image">
-                  <a><img class="row" src=@homeProduct.get("img") style="width:215px; height:200px"/></a>
+                  <a><img class="row" src="@homeProduct.get("img")" /></a>
                 </div>
                 <div class="product-comment">
                   <a><i class="glyphicon glyphicon-comment">@homeProduct.get("comment")</i></a>
@@ -129,14 +128,13 @@
                   <font class="pull-left">@homeProduct.get("platform")</font>
                   <font class="pull-right">@homeProduct.get("time")</font>
                 </div>
-              </li>
+              </div>
               }
-            </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    @footer.render()
 
     <script type="text/javascript">
       $(document).ready(function() {
@@ -158,4 +156,5 @@
       });
     </script>
   </div>
+  @footer.render()
 }

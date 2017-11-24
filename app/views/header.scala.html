@@ -1,21 +1,24 @@
 @(hotProductL: List[String])
 <div class="container top-container">
   <div class="row top-row1">
-    <div class="col-sm-8 col-md-8 col-xs-8">
-      <div>欢迎来到可比价！<a>请登录</a> &nbsp;<a>免费注册</a></div>
-    </div>
-    <div class="col-sm-4 col-md-4 col-xs-4">
-      <div class="pull-right">
-        <a><i class="mmb-iconfont"></i>手机可比价</a><i class="mmb-iconfont ic-arr"></i>
-        <a>购物助手</a>
-        <a>新手帮助</a>
+    <div class="row">
+      <div class="col-sm-8 col-md-8 col-xs-8 top-row18">
+        <div>欢迎来到可比价！<a>请登录</a> &nbsp;<a>免费注册</a></div>
+      </div>
+      <div class="col-sm-4 col-md-4 col-xs-4">
+        <div class="pull-right">
+          <a><i class="mmb-iconfont"></i>手机可比价</a><i class="mmb-iconfont ic-arr"></i>
+          <a>购物助手</a>
+          <a>新手帮助</a>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="row top-row2">
+    <div class="row">
     <div class="logo col-sm-4 col-md-4 col-xs-4">
-      <img src="@routes.Assets.versioned("assets/images/logo.png")" style="width:175px" alt="慢慢买比价网——理性消费倡导者">
+      <img class="header-logo" src="@routes.Assets.versioned("assets/images/logo.png")" alt="慢慢买比价网——理性消费倡导者">
     </div>
     <div class="search col-sm-5 col-md-5 col-xs-5">
       <div class="top-col8">
@@ -37,23 +40,26 @@
     </div>
 
     <div class="col-sm-2 col-md-2 col-xs-2">
-      <div class="pull-right">
+      <div class="row pull-right">
         <div class="row">
           <span>下载手机可比价</span>
         </div>
         <div class="row">
-          <span><img src="http://static.manmanbuy.com/res/app_qr.jpg" style="width:75px; height: 75px"></span>
+          <img src="http://static.manmanbuy.com/res/app_qr.jpg" style="width:75px; height: 75px">
         </div>
       </div>
+    </div>
     </div>
   </div>
 
   <div class="row top-row3">
-    <ul class="nav nav-pills nav-justified">
-      <li class="top-nav"><font>比价导航</font></li>
-      <li role="presentation" class="active"><a>首页</a></li>
-      <li role="presentation"><a>全网比价</a></li>
-      <li role="presentation"><a>价格履历</a></li>
-    </ul>
+    <div class="row">
+      <ul class="nav nav-pills nav-justified">
+        <li class="top-nav"><font>比价导航</font></li>
+        <li role="presentation" class="active"><a href="@gui.routes.HomeController.index()">首页</a></li>
+        <li role="presentation"><a>全网比价</a></li>
+        <li role="presentation"><a>价格履历</a></li>
+      </ul>
+    </div>
   </div>
 </div>

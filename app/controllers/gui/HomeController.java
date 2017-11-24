@@ -1,12 +1,15 @@
 package controllers.gui;
 
-import models.Product;
-import play.Logger;
+import models.entities.KeySearch;
+import play.data.Form;
+import play.data.FormFactory;
+import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.*;
-import services.GeneralSearch;
+import repository.KeySearchRepository;
 
 import javax.inject.Inject;
 import java.util.*;
+import java.util.concurrent.CompletionStage;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -14,10 +17,17 @@ import java.util.*;
  */
 public class HomeController extends Controller {
 
-    private static GeneralSearch searcher;
+    private final KeySearchRepository keySearchRepository;
+    private final FormFactory formFactory;
+    private final HttpExecutionContext httpExecutionContext;
+
     @Inject
-    public HomeController(GeneralSearch searcher) {
-        this.searcher = searcher;
+    public HomeController(KeySearchRepository keySearchRepository,
+                          FormFactory formFactory,
+                          HttpExecutionContext httpExecutionContext) {
+        this.keySearchRepository = keySearchRepository;
+        this.formFactory = formFactory;
+        this.httpExecutionContext = httpExecutionContext;
     }
 
     /**
@@ -124,17 +134,63 @@ public class HomeController extends Controller {
         List<Map<String, String>> homeProductL = new ArrayList<>(Arrays.asList(homeProductL1, homeProductL2, homeProductL3, homeProductL4, homeProductL5, homeProductL6));
 
         List<String> hotProductL = new ArrayList<>(Arrays.asList("iphone X", "iphone 8", "小米", "华为p10", "iphone 7", "新ipad pro", "小米6"));
+        return ok(views.html.index.render(categoryL, homeProductL, hotProductL));
 
-        // TODO
-        // to be remove
-        // just for test
-        List<Product> products = searcher.query();
-        Logger.debug("-----------solr: " + products.size());
-        for (Product product : products) {
-            Logger.debug(product.getId() + " : " + product.getName() + " : " + product.getPrice());
+    }
+
+    public CompletionStage<Result> editPage(long id) {
+        Form<KeySearch> KeySearchAdd = formFactory.form(KeySearch.class);
+        return keySearchRepository.getRow(id).thenApplyAsync(row -> {
+            KeySearch c = row.get();
+            Form<KeySearch> keySearchForm = formFactory.form(KeySearch.class).fill(c);
+            return ok(views.html.edit.render(KeySearchAdd, keySearchForm, id));
+        }, httpExecutionContext.current());
+    }
+
+    public CompletionStage<Result> list() {
+        System.out.println("3333333333s");
+        return keySearchRepository.list().thenApplyAsync(list -> {
+            return ok(views.html.keySearch.render(list));
+        }, httpExecutionContext.current());
+    }
+
+    public CompletionStage<Result> edit(long id) {
+        Form<KeySearch> KeySearchAdd = formFactory.form(KeySearch.class);
+        Form<KeySearch> keySearchForm = formFactory.form(KeySearch.class).bindFromRequest();
+        if (keySearchForm.hasErrors()) {
+            System.out.println("444444444");
+            return keySearchRepository.getRow(id).thenApplyAsync(row -> {
+                return badRequest(views.html.edit.render(KeySearchAdd, keySearchForm, id));
+            }, httpExecutionContext.current());
+        } else {
+            KeySearch keySearchModel = keySearchForm.get();
+            return keySearchRepository.edit(keySearchModel, id).thenApplyAsync(v -> {
+                return redirect("/");
+            }, httpExecutionContext.current());
+        }
+    }
+
+    public CompletionStage<Result> delete(long id) {
+        return keySearchRepository.delete(id).thenApplyAsync(v -> {
+            return redirect("/");
+        }, httpExecutionContext.current());
+    }
+
+    public CompletionStage<Result> add() {
+        System.out.println(11111111);
+        long a = 1;
+        Form<KeySearch> keySearchForm = formFactory.form(KeySearch.class);
+        Form<KeySearch> KeySearchAdd = formFactory.form(KeySearch.class).bindFromRequest();
+        if (KeySearchAdd.hasErrors()) {
+            return keySearchRepository.doNothing().thenApplyAsync(v -> {
+                return badRequest(views.html.edit.render(KeySearchAdd, keySearchForm, a));
+            }, httpExecutionContext.current());
         }
 
-        return ok(views.html.index.render(categoryL, homeProductL, hotProductL));
+        KeySearch keySearchModel = KeySearchAdd.get();
+        return keySearchRepository.add(keySearchModel).thenApplyAsync(v -> {
+            return redirect("/");
+        }, httpExecutionContext.current());
     }
 
 }

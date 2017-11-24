@@ -3,15 +3,24 @@
 # ~~~~
 
 # controllers for gui access
-GET     /                     controllers.gui.HomeController.index
+GET     /                        controllers.gui.HomeController.index
 
-GET    /product/search        controllers.gui.ProductController.search
+GET    /product/search           controllers.gui.ProductController.search
 
-GET    /product/detail        controllers.gui.ProductController.productDetail
+GET    /product/detail           controllers.gui.ProductController.productDetail
+
+GET    /home/editPage/:id        controllers.gui.HomeController.editPage(id: Long)
+POST   /home/edit/:id            controllers.gui.HomeController.edit(id: Long)
+POST   /home/delete/:id          controllers.gui.HomeController.delete(id: Long)
+POST   /home/add                 controllers.gui.HomeController.add()
+
 
 # controllers for api access for app.
-GET     /api/                 controllers.api.HomeController.index
+GET     /api/                    controllers.api.HomeController.index
 
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file         controllers.Assets.versioned(path="/public", file: Asset)
+GET     /assets/*file            controllers.Assets.versioned(path="/public", file: Asset)
+
+
+
