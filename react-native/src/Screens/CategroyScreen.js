@@ -1,68 +1,87 @@
-import React from 'react';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import { View, Text } from 'react-native';
+import React, { Component } from 'react';
+import Util from '../Utils/Utils';
+import Goods from '../Component/Goods'
+import Catalog from '../Component/Catalog'
+import { StyleSheet, Text, View } from 'react-native';
+import IconFA from 'react-native-vector-icons/FontAwesome';
 
-import HttpService from '../Services/HttpService';
-
+/**
+ * 分类画面
+ */
 class CategroyScreen extends React.Component {
-  static navigationOptions = {
-    tabBarLabel: '分类',
-    tabBarIcon: ({ tintColor, focused }) => (
-      <Ionicons
-        name={focused ? 'ios-add' : 'ios-home-outline'}
-        size={26}
-        style={{ color: tintColor }}
-      />
-    )
-  };
-//
-  componentDidMount() {
-    // this.props.dispatch(this._fetchHomeData());
-    this._fetchHomeData();
-  }
 
-  render() {
-    return (
-      <View>
-        <Text></Text>
-      </View>
-    );
-  }
+	constructor(props) {
+		super(props)
+	}
+  
+	static navigationOptions = {
+		header:null,
+		tabBarLabel: '分类',
+		tabBarIcon: ({ tintColor, focused }) => (
+			<IconFA
+			name={'search'}
+			size={26}
+			style={{ color: tintColor }}
+			/>
+		)
+	};
 
-  _fetchHomeData() {
-    // return (dispatch) => {
-      HttpService.get('http://taiemao.com/index.php?route=app/home')
-                 .then((value) => {
-                    // dispatch({
-                    //   data: result,
-                    // });
-                 })
-                //  .catch((reason) => {
+	render() {
+		const { navigate } = this.props.navigation;
 
-                //  });
-                
-      // new Promise((resolve, reject) => {
-      //   fetch(url, {
-      //     method: 'get',
-      //     // headers: new Headers({
-      //     //   'Content-Type': 'application/x-www-form-urlencoded',
-      //     // }),
-      //     // body: JSON.stringify(params),
-      //   })
-      //   .then((response) => {
-      //     if (response.ok) {
-      //       return response.json();
-      //     } else {
-      //       reject('服务器错误!');
-      //     }
-      //   })
-      //   .then(data => {
-      //     // data就是我们请求的repos
-      //     console.log(data)
-      //   });
-      // });
-    }
-  // }
+		return (
+			<View style={styles.container}>
+				<View style={styles.nav}>
+					<View style={styles.topBox}>
+						<View style={styles.searchSection}>
+							<Text 
+								style={styles.searchInput}
+								onPress={() => navigate('Search')}>
+								<IconFA size={18} name="search" />{"   "}请输入商品关键字
+							</Text>
+						</View>
+					</View>
+				</View>
+				<View style={styles.contentContainer}>
+					<Catalog />
+					<Goods />
+				</View>
+			</View>
+		);
+	}
 }
+
+var styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		backgroundColor: '#efede8'
+	},
+	nav: {
+		flex: 0.1,
+		backgroundColor: '#eef0f3'
+	},
+	topBox: {
+		height: Util.size.width/12,
+		marginTop: Util.size.height/40,
+		marginLeft: Util.size.width/30,
+		flexDirection: 'row',
+	},
+	searchSection: {
+		flex: 1,
+		marginRight: Util.size.width/30,
+		borderRadius: 5,
+		flexDirection: 'row',
+		backgroundColor: '#FFFFFF',
+	},
+	searchInput: {
+		flex: 0.85,
+		marginLeft: Util.size.width/30,
+		paddingTop: Util.size.height/70
+	},
+	contentContainer: {
+		flex: 0.9,
+		flexDirection: 'row',
+	}
+})
 
 export default CategroyScreen

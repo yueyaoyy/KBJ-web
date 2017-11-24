@@ -20,6 +20,12 @@ const images = {
   // hamburger: require('../Images/Icons/hamburger.png'),
   // backButton: require('../Images/Icons/back-button.png'),
   // closeButton: require('../Images/Icons/close-button.png')
+  title: require('../Images/title1.png'),
+  phone: require('../Images/phone.jpg'),
+  pg: require('../Images/pg.jpg'),
+  hw: require('../Images/hw.jpg'),
+  back: require('../Images/back.png'),
+  search: require('../Images/search_1.png'),
 };
 
 export default images
