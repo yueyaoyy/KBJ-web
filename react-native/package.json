@@ -7,6 +7,10 @@
 		"test": "jest"
 	},
 	"dependencies": {
+		"react-native-radio-master": "^1.0.1",
+		"react-native-pull": "^2.0.2",
+		"react-native-flexi-radio-button": "^0.2.2",
+		"moment": "^2.19.2",
 		"apisauce": "^0.14.1",
 		"ramda": "^0.25.0",
 		"ramdasauce": "^2.1.0",
