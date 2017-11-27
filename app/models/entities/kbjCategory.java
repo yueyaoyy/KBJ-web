@@ -6,34 +6,31 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * KeySearch entity created by Dai
+ */
+
 @Constraints.Validate
 @Entity
-public class MallCategory extends BaseModel {
+public class kbjCategory  extends BaseModel {
 
     @Id
     public Long id;
 
     @Constraints.Required
     @Constraints.MaxLength(100)
-    @Column(length=100)
+    @Column(nullable = false, length=100)
     public String name;
 
     @Constraints.Required
-    @Constraints.MaxLength(500)
-    @Column(length=500)
-    public String link;
+    public int parentId;
 
     @Constraints.Required
-    @Constraints.MaxLength(30)
-    @Column(length=30)
-    public String mall;
+    @Column(columnDefinition = "boolean default 1")
+    public Boolean isCrawleTarget;
 
     @Constraints.Required
-    @Constraints.MaxLength(500)
-    @Column(length=500)
-    public String tag;
-
-    @Constraints.Required
-    @Column(columnDefinition = "boolean default true")
+    @Column(columnDefinition = "boolean default 1")
     public Boolean valid;
+
 }
