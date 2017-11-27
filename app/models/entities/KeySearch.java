@@ -28,16 +28,13 @@ public class KeySearch extends BaseModel implements Validatable<List<ValidationE
     public String keyWord;
 
     @Constraints.Required
-    public long searchCounts;
+    public Long searchCounts;
 
     @Override
     public List<ValidationError> validate() {
         final List<ValidationError> errors = new ArrayList<>();
         if (keyWord.length() < 2) {
             errors.add(new ValidationError("keyWord", "不能少于两个字"));
-        }
-        if (searchCounts == 1) {
-            errors.add(new ValidationError("searchCounts", "不能为1"));
         }
         return errors;
     }

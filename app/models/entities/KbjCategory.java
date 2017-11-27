@@ -12,7 +12,7 @@ import javax.persistence.Id;
 
 @Constraints.Validate
 @Entity
-public class kbjCategory  extends BaseModel {
+public class KbjCategory extends BaseModel {
 
     @Id
     public Long id;
@@ -26,11 +26,11 @@ public class kbjCategory  extends BaseModel {
     public int parentId;
 
     @Constraints.Required
-    @Column(columnDefinition = "boolean default 1")
+    @Column(columnDefinition = "boolean default true")
     public Boolean isCrawleTarget;
 
     @Constraints.Required
-    @Column(columnDefinition = "boolean default 1")
+    @Column(columnDefinition = "boolean default true")
     public Boolean valid;
 
 }
