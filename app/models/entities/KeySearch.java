@@ -5,7 +5,10 @@ import play.data.validation.Constraints;
 import play.data.validation.ValidationError;
 import play.data.validation.Constraints.Validatable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.validation.Constraint;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -18,21 +21,17 @@ import java.util.List;
 @Entity
 public class KeySearch extends BaseModel implements Validatable<List<ValidationError>> {
 
+    @Id
+    public Long id;
+
     @Constraints.Required
     public String keyWord;
 
     @Constraints.Required
     public long searchCounts;
 
-    @Formats.DateTime(pattern="yyyy-MM-dd")
-    public Date dateAdded;
-
-    @Formats.DateTime(pattern="yyyy-MM-dd")
-    public Date dateModifiled;
-
     @Override
     public List<ValidationError> validate() {
-        System.out.println(11111111);
         final List<ValidationError> errors = new ArrayList<>();
         if (keyWord.length() < 2) {
             errors.add(new ValidationError("keyWord", "不能少于两个字"));

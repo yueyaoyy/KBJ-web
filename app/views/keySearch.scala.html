@@ -25,8 +25,8 @@
             <th>@row.id</th>
             <th>@row.keyWord</th>
             <th>@row.searchCounts</th>
-            <th>@row.dateAdded.format("dd - MM - yyyy")</th>
-            <th>@row.dateModifiled.format("dd - MM - yyyy")</th>
+            <th>@row.createDate.format("dd - MM - yyyy")</th>
+            <th>@row.updateDate.format("dd - MM - yyyy")</th>
             <th><button class="btn" onclick="location.href='@gui.routes.HomeController.editPage(row.id)'">修改</button></th>
           </tr>
         }
