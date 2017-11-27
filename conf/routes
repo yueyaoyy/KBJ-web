@@ -14,6 +14,7 @@ POST   /home/edit/:id            controllers.gui.HomeController.edit(id: Long)
 POST   /home/delete/:id          controllers.gui.HomeController.delete(id: Long)
 POST   /home/add                 controllers.gui.HomeController.add()
 
+GET     /manage                  controllers.gui.manage.IndexController.index()
 
 # controllers for api access for app.
 GET     /api/                    controllers.api.HomeController.index
@@ -21,6 +22,3 @@ GET     /api/                    controllers.api.HomeController.index
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file            controllers.Assets.versioned(path="/public", file: Asset)
-
-
-
