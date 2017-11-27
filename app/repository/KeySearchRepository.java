@@ -49,7 +49,7 @@ public class KeySearchRepository {
                 if (savedKeySearch != null) {
                     savedKeySearch.keyWord = newKeySearch.keyWord;
                     savedKeySearch.searchCounts = newKeySearch.searchCounts;
-                    savedKeySearch.dateModifiled =  new Date(System.currentTimeMillis());
+                    savedKeySearch.updateDate =  new Date(System.currentTimeMillis());
 
                     savedKeySearch.update();
 
@@ -78,8 +78,8 @@ public class KeySearchRepository {
     public CompletionStage<Optional<Long>> add(KeySearch keySearchForm) {
         return supplyAsync(() -> {
             try {
-                keySearchForm.dateModifiled = new Date(System.currentTimeMillis());
-                keySearchForm.dateAdded = new Date(System.currentTimeMillis());
+                keySearchForm.updateDate = new Date(System.currentTimeMillis());
+                keySearchForm.createDate = new Date(System.currentTimeMillis());
                 ebeanServer.insert(keySearchForm);
             } finally {
                 return Optional.empty();
