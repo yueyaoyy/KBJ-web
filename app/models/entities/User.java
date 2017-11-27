@@ -4,7 +4,6 @@ import play.data.validation.Constraints;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.validation.Constraint;
 
 @Entity
 public class User extends BaseModel {
@@ -13,23 +12,28 @@ public class User extends BaseModel {
     public Long id;
 
     @Constraints.Required
+    @Constraints.MaxLength(30)
     @Column(length = 30)
     public String name;
 
     @Constraints.Required
     @Column(length = 100)
+    @Constraints.MaxLength(100)
     public String password;
 
     @Constraints.Required
     @Column(length = 1000)
+    @Constraints.MaxLength(1000)
     public String photoUrl;
 
     @Constraints.Required
     @Column(length = 50)
+    @Constraints.MaxLength(50)
     public String email;
 
     @Constraints.Required
     @Column(length = 15)
+    @Constraints.MaxLength(15)
     public String phone;
 
     @Constraints.Required
