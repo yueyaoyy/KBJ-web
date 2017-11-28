@@ -7,6 +7,12 @@ import views.html.productSearch;
 
 import java.util.*;
 
+/**
+ * This controller contains an action to handle HTTP requests
+ * to the application's product page.
+ *  @author yue-yao
+ *  @date 2017/11/24
+ */
 public class ProductController extends Controller{
 
     public Result search() {

@@ -76,12 +76,9 @@ public class KeySearchRepository {
     }
 
     public CompletionStage<Optional<Long>> add(KeySearch keySearchForm) {
-        System.out.println("9999999999999999999999999" + keySearchForm.keyWord);
-        System.out.println("9999999999999999999999999" + keySearchForm.searchCounts);
         return supplyAsync(() -> {
             try {
                 keySearchForm.insert();
-
 //                ebeanServer.insert(keySearchForm);
             } finally {
                 return Optional.empty();

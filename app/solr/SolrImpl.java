@@ -25,7 +25,7 @@ public class SolrImpl implements SolrI {
      * fq	指定用于对查询结果进行过滤的过滤器(也看作是一种query) eg: fq=price:[100 To *]&fq=setction:0
      * fl	指定查询结果中返回的字段，该字段的stored=”true”或docValues=”true” ,eg:fl=id,title,product(price, popularity)
      * debug	指定查询结果中携带额外的调试信息：时间信息debug=timing，“explain”信息debug=results,所有调试信息debug=query
-     * explainOther	Allows clients to specify a Lucene query to identify a set of documents. If non-blank,the explain info of each document which matches this query, relative to the main query (specified by the q parameter) will be returned along with the rest of the debugging information.
+     * explainOther	Allows clients to specify a Lucene query to identify a set of documents. If non-blank,the explain info of each document which matches this query, relative to the manageMain query (specified by the q parameter) will be returned along with the rest of the debugging information.
      * timeAllowed	指定查询处理的时间，单位毫秒。如果查询在指定的时间未完成，则只返回部分信息
      * segmentTerminateEarly	Indicates that, if possible, Solr should stop collecting documents from each individual (sorted) segment once it can determine that any subsequent documents in that segment will not be candidates for the rows being returned. The default is false.
      * omitHeader	当设为true时，返回结果不包含头部信息(例如请求花费的时间等信息)，默认是false

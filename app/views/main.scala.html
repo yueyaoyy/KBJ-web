@@ -4,13 +4,13 @@
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  *@
-@()(content: Html)
+@(title: String = "可比价网")(content: Html)
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         @* Here's where we render the page title `String`. *@
-        @*<title>@title</title>*@
+        <title>@title</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("bootstrap/dist/css/bootstrap.min.css")">

@@ -14,6 +14,8 @@ import java.util.concurrent.CompletionStage;
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
+ *  @author yue-yao
+ *  @date 2017/11/24
  */
 public class HomeController extends Controller {
 

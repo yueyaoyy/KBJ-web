@@ -8,6 +8,10 @@ import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import java.util.Date;
 
+/**
+ *  @author yue-yao
+ *  @date 2017/11/24
+ */
 @MappedSuperclass
 public class BaseModel extends Model {
    private static final long serialVersionUID = 1658731911988408622L;

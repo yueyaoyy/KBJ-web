@@ -14,7 +14,11 @@ POST   /home/edit/:id            controllers.gui.HomeController.edit(id: Long)
 POST   /home/delete/:id          controllers.gui.HomeController.delete(id: Long)
 POST   /home/add                 controllers.gui.HomeController.add()
 
-GET     /manage                  controllers.gui.manage.IndexController.index()
+
+# manage
+GET     /manage                  controllers.gui.manage.IndexController.index
+
+GET     /manage/cate/map         controllers.gui.manage.CategoryController.top
 
 # controllers for api access for app.
 GET     /api/                    controllers.api.HomeController.index

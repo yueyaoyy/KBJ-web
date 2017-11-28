@@ -90,7 +90,7 @@ body{
   font-weight:bold;
 }
 
-.sidebar .nav li a:hover, .sidebar .nav li.current > a {
+.sidebar .nav li a:hover, .sidebar .nav .current > a {
   background: #fff;
   color: #555;
   border-bottom:0px;
@@ -108,4 +108,9 @@ body{
   content: "";
   margin-top: 8px;
   margin-left: 2px;
+}
+
+/* categoryMapping */
+.panel-body {
+  clear:both;
 }

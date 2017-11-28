@@ -14,22 +14,23 @@
       </li>
       <li class="submenu" id="20">
         <a href="#">
-          <i class="glyphicon glyphicon-duplicate"></i> 商品
+          <i class="glyphicon glyphicon-duplicate"></i> 商品种类管理
           <span class="caret pull-right"></span>
         </a>
         <ul>
-          <li id="21"><a href="#">商品管理一覧</a></li>
-          <li id="22"><a href="#">商品管理</a></li>
+          <li id="21"><a href="#">商城品类管理</a></li>
+          <li id="22"><a href="#">可比价品类管理</a></li>
+          <li id="23"><a href="@gui.manage.routes.CategoryController.top">品类映射管理</a></li>
         </ul>
       </li>
-      <li class="submenu" id="20">
+      <li class="submenu" id="">
           <a href="#">
               <i class="glyphicon glyphicon-duplicate"></i> 商品
               <span class="caret pull-right"></span>
           </a>
           <ul>
-              <li id="21"><a href="#">商品管理一覧</a></li>
-              <li id="22"><a href="#">商品管理</a></li>
+              <li id=""><a href="#">商品管理一覧</a></li>
+              <li id=""><a href="#">商品管理</a></li>
           </ul>
       </li>
       <li id="70"><a href="#"><i class="glyphicon glyphicon-folder-close"></i>设定值</a></li>
@@ -42,14 +43,14 @@
           <li id="41"><a href="#">管理表</a></li>
         </ul>
       </li>
-      <li class="submenu" id="20">
+      <li class="submenu" id="">
           <a href="#">
               <i class="glyphicon glyphicon-duplicate"></i> 商品
               <span class="caret pull-right"></span>
           </a>
           <ul>
-              <li id="21"><a href="#">商品管理一覧</a></li>
-              <li id="22"><a href="#">商品管理</a></li>
+              <li id=""><a href="#">商品管理一覧</a></li>
+              <li id=""><a href="#">商品管理</a></li>
           </ul>
       </li>
       <li id="90"><a href="#"><i class="glyphicon glyphicon-lock"></i> 管理者管理</a></li>
@@ -60,19 +61,24 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-    $(".submenu > a").click(function(e) {
-        e.preventDefault();
-        var $li = $(this).parent("li");
-        var $ul = $(this).next("ul");
-        if($li.hasClass("open")) {
-            $ul.slideUp(350);
-            $li.removeClass("open");
-        } else {
-            $(".nav > li > ul").slideUp(350);
-            $(".nav > li").removeClass("open");
-            $ul.slideDown(350);
-            $li.addClass("open");
-        }
-    });
+    var li = $("#menu").val();
+    var ul = Math.floor(li/10%10)*10;
+    $("#"+li).addClass("current");
+    $("#"+ul).addClass("open");
+});
+
+$(".submenu > a").click(function(e) {
+    e.preventDefault();
+    var $li = $(this).parent("li");
+    var $ul = $(this).next("ul");
+    if($li.hasClass("open")) {
+        $ul.slideUp(350);
+        $li.removeClass("open");
+    } else {
+        $(".nav > li > ul").slideUp(350);
+        $(".nav > li").removeClass("open");
+        $ul.slideDown(350);
+        $li.addClass("open");
+    }
 });
 </script>
